@@ -1,0 +1,15 @@
+master:
+- 127.0.0.1
+id: minion1
+root_dir: /root/minion1
+pki_dir: /pki/minion
+log_file: /salt-minion.log
+pidfile: /salt-minion.pid
+master_alive_interval: -1
+recon_default: 1000
+recon_max: 59000
+recon_randomize: True
+acceptance_wait_time: 10
+random_reauth_delay: 60
+auth_timeout: 60
+hash_type: sha256

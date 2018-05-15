@@ -1,0 +1,61 @@
+worker_threads: 5
+timeout: 30
+sock_pool_size: 5
+auto_accept: True
+recon_default: 1000
+recon_max: 59000
+recon_randomize: True
+acceptance_wait_time: 10
+random_reauth_delay: 60
+auth_timeout: 60
+gather_job_timeout: 30
+
+rotate_aes_key: False
+
+root_dir: /
+pki_dir: /root/salt_data/pki/
+cachedir: /root/salt_data/cache
+sock_dir: /root/salt_data/sock
+key_dir: /root/salt_data/key
+autosign_file: /data/autoasign
+autoreject_file: /data/autoreject
+pidfile: /root/salt_data/pid/master
+log_file: /root/salt_data/log/master
+log_level_logfile: info
+log_fmt_console: '%(asctime)s,%(msecs)03d [%(name)s:%(lineno)-15d][%(levelname)-8s] %(message)s'
+log_fmt_logfile: '%(asctime)s,%(msecs)03d [%(name)s:%(lineno)-15d][%(levelname)-8s] %(message)s'
+
+api_pidfile:  /root/salt_data/pid/api
+api_logfile: /root/salt_data/log/api
+
+verify_env: True
+
+external_auth:
+  pam:
+    test:
+      - .*
+      - '@runner'
+
+rest_tornado:
+  port: 32001
+  disable_ssl: True
+
+fileserver_backend:
+  - roots
+file_roots:
+  base:
+    - /root/salt_extmods/base
+    - /root/salt_extmods/base/_states
+  dev:
+    - /root/salt_extmods/dev
+    - /root/salt_extmods/dev/_states
+  prod:
+    - /root/salt_extmods/prod
+    - /root/salt_extmods/prod/_states
+pillar_roots:
+  base:
+    - /root/salt_pillar/base
+  dev:
+    - /root/salt_pillar/dev
+  prod:
+    - /root/salt_pillar/prod

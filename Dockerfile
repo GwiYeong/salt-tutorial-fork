@@ -28,13 +28,12 @@ RUN eval "$($pyenv init -)" \
     && pyenv global 2.7.13
 ENV PATH /root/.pyenv/shims/:$PATH
 
-# Download salt-2017.7.6
-RUN curl -L -o /root/salt-2017.7.6.tar.gz https://drive.google.com/uc\?export\=download\&id\=1qTrEj7Gj0cTbLyXUgSxaufVK_5QVXVCD
-RUN tar zxf /root/salt-2017.7.6.tar.gz -C /root \
-    && mv /root/salt-2017.7.6 /root/salt
-
-# Install salt-2017.7.6
+# Get & Get Salt Stack
+RUN git clone https://github.com/saltstack/salt /root/salt
 WORKDIR /root/salt
+RUN git fetch origin; git checkout tags/v2017.7.5
+
+# Install salt-2017.7.5
 RUN pip install --upgrade pip \
     && pip install -r requirements/dev_python27.txt \
     && pip install -r requirements/zeromq.txt \

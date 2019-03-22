@@ -1,7 +1,9 @@
+{{ saltenv }}:
+  '*':
+    - location
 master:
   '*':
     - location
-    - apache
 
 nhnent:
   '*':

@@ -1,5 +1,8 @@
 master:
   '*':
     - location
-    - nhnent
     - apache
+
+nhnent:
+  '*':
+    - nhnent

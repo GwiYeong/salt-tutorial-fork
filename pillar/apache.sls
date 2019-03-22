@@ -9,3 +9,4 @@ pkgs_master:
   apache: apache
   vim: vim
   {% endif %}
+  env: {{ saltenv }}

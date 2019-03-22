@@ -1,4 +1,4 @@
-pkgs_master:
+pkgs_stage:
   {% if grains['os_family'] == 'RedHat' %}
   apache: httpd
   vim: vim-enhanced
@@ -9,3 +9,4 @@ pkgs_master:
   apache: apache
   vim: vim
   {% endif %}
+  env: {{ saltenv }}

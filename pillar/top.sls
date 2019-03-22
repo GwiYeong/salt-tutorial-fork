@@ -1,6 +1,14 @@
-master:
+base:
   '*':
     - location
+
+master:
+  '*':
+    - apache
+
+stage:
+  '*':
+    - test
 
 nhnent:
   '*':

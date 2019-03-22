@@ -1,3 +1,3 @@
-nhnent_master:
+nhnent_stage:
   master: env
   env: {{ saltenv }}

@@ -1,0 +1,1 @@
+location_master: nhn_playart_master

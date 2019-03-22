@@ -1,6 +1,3 @@
-{{ saltenv }}:
-  '*':
-    - location
 master:
   '*':
     - location

@@ -1,4 +1,4 @@
-pkgs_stage:
+pkgs_stage_fork:
   {% if grains['os_family'] == 'RedHat' %}
   apache: httpd
   vim: vim-enhanced

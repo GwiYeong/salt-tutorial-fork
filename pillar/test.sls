@@ -1,2 +1,2 @@
-test_stage:
+test_stage_fork:
   env_test: {{ saltenv }}

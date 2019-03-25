@@ -4,4 +4,7 @@ test_stage_fork:
 
 include:
   - nhnent:
-      key: nhnent
+      defaults:
+        de: default
+        nhnent: default_nhnent
+      key: de

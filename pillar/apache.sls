@@ -1,4 +1,4 @@
-pkgs_master:
+pkgs_master_fork:
   {% if grains['os_family'] == 'RedHat' %}
   apache: httpd
   vim: vim-enhanced
